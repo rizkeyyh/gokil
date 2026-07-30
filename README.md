@@ -1,2 +1,188 @@
-# gokil
-tugas ipas
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Data Dictionary Inventarisasi Tanaman SMKN 64 Jakarta</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 8px;
+  background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+}
+
+.container {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.98);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+h1 {
+  color: #0d47a1;
+  margin: 0 0 3px 0;
+  font-size: 14px;
+  text-align: center;
+}
+.desc {
+  font-size: 10px;
+  color: #555;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.tabel-wrapper {
+  overflow-x: hidden; 
+}
+table {
+  width: 100%; /* paksa 100% lebar layar */
+  table-layout: fixed; /* kunci biar kolom dibagi rata */
+  border-collapse: collapse;
+  font-size: 8.5px; /* kecilin lagi */
+}
+th {
+  background: linear-gradient(45deg, #1e88e5, #42a5f5);
+  color: white;
+  padding: 5px 2px;
+  text-align: center;
+  word-wrap: break-word; /* biar teks turun kebawah kalau kepanjangan */
+}
+td {
+  padding: 4px 2px;
+  border: 1px solid #e0e0e0;
+  text-align: center;
+  word-wrap: break-word; /* biar teks ga keluar */
+  white-space: normal; /* izinkan turun kebawah */
+}
+tr:nth-child(even) {
+  background: #e3f2fd;
+}
+.badge {
+  background: #29b6f6;
+  color: white;
+  padding: 1px 4px;
+  border-radius: 8px;
+  font-size: 8px;
+  font-weight: bold;
+}
+a {
+  color: #1565c0;
+  font-size: 8.5px;
+  word-break: break-all;
+}
+footer {
+  text-align: center;
+  margin-top: 8px;
+  font-size: 9px;
+  color: #555;
+}
+
+/* Atur lebar kolom manual biar pas */
+th:nth-child(1), td:nth-child(1) { width: 5%; }  /* No */
+th:nth-child(2), td:nth-child(2) { width: 18%; } /* Field */
+th:nth-child(3), td:nth-child(3) { width: 12%; } /* Tipe */
+th:nth-child(4), td:nth-child(4) { width: 8%; }  /* PK */
+th:nth-child(5), td:nth-child(5) { width: 10%; } /* Panjang */
+th:nth-child(6), td:nth-child(6) { width: 20%; } /* Contoh */
+th:nth-child(7), td:nth-child(7) { width: 27%; } /* Ket */
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1>🌱 Data Dictionary - Inventarisasi Tanaman SMKN 64 Jakarta</h1>
+  <div class="desc">Struktur Database</div>
+
+  <div class="tabel-wrapper">
+    <table>
+      <thead>
+        <tr>
+          <th>No</th>
+          <th>Field</th>
+          <th>Tipe</th>
+          <th>PK</th>
+          <th>Panjang</th>
+          <th>Contoh</th>
+          <th>Keterangan</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>id_tanaman</td>
+          <td>INT</td>
+          <td><span class="badge">YES</span></td>
+          <td>11</td>
+          <td>T01</td>
+          <td>Kode unik tanaman</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>nama_lokal</td>
+          <td>VARCHAR</td>
+          <td>-</td>
+          <td>100</td>
+          <td>Bakungan</td>
+          <td>Nama umum tanaman</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>nama_latin</td>
+          <td>VARCHAR</td>
+          <td>-</td>
+          <td>100</td>
+          <td>Hymenocallis littoralis</td>
+          <td>Nama ilmiah tanaman</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>lokasi_zone</td>
+          <td>VARCHAR</td>
+          <td>-</td>
+          <td>50</td>
+          <td>Halaman Depan</td>
+          <td>Lokasi di sekolah</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>tempat_tumbuh</td>
+          <td>VARCHAR</td>
+          <td>-</td>
+          <td>20</td>
+          <td>Pot</td>
+          <td>Media tanam</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>kondisi_kesehatan</td>
+          <td>VARCHAR</td>
+          <td>-</td>
+          <td>50</td>
+          <td>Sehat</td>
+          <td>Kondisi saat ini</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>url_foto</td>
+          <td>TEXT</td>
+          <td>-</td>
+          <td>-</td>
+          <td><a href="#">https://drive.google.com/file/d/1QcZ7DKxBGYQSA04KOMd6vBxAvEnmv633/view?usp=drivesdk</a></td>
+          <td>Foto dokumentasi</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <footer>
+    © SMKN 64 Jakarta 2026
+  </footer>
+</div>
+
+</body>
+</html>
